@@ -49,8 +49,14 @@ ul{
 }
 .mytable{
     overflow: scroll;
+    border-bottom: none;
 }
 table{
     border-collapse:separate;
     border-spacing:0 15px;
+    border-bottom: none;
+}
+a{
+    text-decoration: none;
+    color:inherit;
 }
