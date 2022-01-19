@@ -12,6 +12,7 @@ main{
 }
 .iconne{
     width: 2,5vh;
+    background-color: red;
 }
 .my-container{
     margin-left: 34vh;
@@ -28,17 +29,20 @@ li:hover{
     border-radius: 5px;
     background-color:#00C1FE;
     width: 18vh;
-    h
     height: 5vh;
-
 }
-.list{
-    margin-top: -100vh;
-    margin-left: 70vh;
+.addstudent{
+    margin-top: -130vh;
 }
-.table{
-    /* margin-top:-100vh; */
-    margin-left: 70vh;
+.md{
+    width: 10vh;
+}
+.button{
+    width: 50vh;
+}
+table{
+    /* margin-top:-130vh; */
+    margin-left: 50vh;
     border-collapse:separate ;
     border-spacing: 0 30px;
 }
