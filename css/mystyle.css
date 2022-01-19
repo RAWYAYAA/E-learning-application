@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;0,700;0,800;1,700&display=swap');
+*{
+    font-family: 'Montserrat';
+}
+ul{
+    list-style: none;
+}
+.bg-mycolor{
+    background-color: #FAFFC1;
+}
+.card{
+    min-width: 200px !important;
+}
+.card1{
+    background: #F0F9FF;
+}
+.card2{
+    background: #FEF6FB;
+}
+.card3{
+    background: #FEFBEC;
+}
+.card4{
+    background: linear-gradient(110.42deg, #00C1FE 18.27%, #FAFFC1 91.84%);
+}
+.just{
+    margin-top: 30px;
+    justify-content: space-evenly;
+}
+.fend{
+    align-self: flex-end;
+}
+
+
+@media screen and (max-width:984px) {
+    .navbar{
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        align-items: center;
+    }
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+}
+.uls{
+    display: flex;
+}
+.mytable{
+    overflow: scroll;
+}
+table{
+    border-collapse:separate;
+    border-spacing:0 15px;
+}
