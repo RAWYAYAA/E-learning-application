@@ -18,7 +18,7 @@
                <h2>SIGN IN</h2>
                <p class="f-3 text-muted">Enter your credentials to access your account</p>
               </div>
-                    <form action="Dashboard.html">
+                    <form action="Dashboard.php">
                              <div class="mb-4">
                              <label class="form-label">Email</label>
                              <input type="email" class="form-control"  placeholder="Enter your email">
