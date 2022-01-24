@@ -11307,11 +11307,13 @@ body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
   }
 
   #page-content-wrapper {
-    min-width: 0;
     width: 100%;
   }
 
   body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
     margin-left: -15rem;
   }
+}
+thead{
+  border-bottom: 0px white solid;
 }
