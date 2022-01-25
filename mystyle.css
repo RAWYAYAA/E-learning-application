@@ -5,6 +5,10 @@
 ul{
     list-style: none;
 }
+a.link{
+    text-decoration: none;
+    color:inherit;
+}
 .bg-mycolor{
     background-color: #FAFFC1;
 }
@@ -55,8 +59,5 @@ table{
     border-collapse:separate;
     border-spacing:0 15px;
     border-bottom: none;
-}
-a{
-    text-decoration: none;
-    color:inherit;
+    white-space: nowrap;
 }

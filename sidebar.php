@@ -14,7 +14,7 @@
                 <div class=" mt-5 px-3">
                     <ul>
                     <li class="m-3 p-2 rounded-3 <?php if(basename($_SERVER['REQUEST_URI']) == 'Dashboard.php') echo 'bg-info'; ?>">
-                        <a href="Dashboard.php">
+                        <a class="link" href="Dashboard.php">
                         <img src="./assets/Vector.svg" alt="home">
                         <span class="p-3">Home</span>
                     </a>
@@ -24,13 +24,13 @@
                         <span class="p-3">Course</span>
                     </li>
                     <li class="m-3 p-2 rounded-3 <?php if(basename($_SERVER['REQUEST_URI']) == 'student.php') echo 'bg-info'; ?>">
-                        <a href="student.php">
-                        <img src="./assets/graduation.svg" alt="graduation">
+                        <a class="link" href="student.php">
+                        <img class="item-align-center" src="./assets/graduation.svg" alt="graduation">
                         <span class="p-3">Students</span>
                     </a>
                     </li>
                     <li class="m-3 p-2 rounded-3 <?php if(basename($_SERVER['REQUEST_URI']) == 'paymentdetail.php') echo 'bg-info'; ?>">
-                        <a href="paymentdetail.php">
+                        <a class="link" href="paymentdetail.php">
                         <img src="./assets/payment.svg" alt="payment">
                         <span class="p-3">Payment</span>
                        </a>
@@ -44,7 +44,7 @@
                         <span class="p-3">Settings</span>
                     </li>
                     <li class="mt-5 m-3 ">
-                        <a href="index.php">
+                        <a class="link" href="index.php">
                             <span class="p-3">Logout</span>
                             <img src="./assets/logout.svg" alt="logout">
                         </a>

@@ -9,9 +9,9 @@
         <link href="styles.css" rel="stylesheet" />
         <link rel="stylesheet" href="mystyle.css">
         <title>Dashboard</title>
-
     </head>
     <body>
+        <main>
             <?php
                 include 'sidebar.php';
             ?>
@@ -66,9 +66,7 @@
                                         </td>
                                         ';
                                         echo '<tr>';
-  
                                     }
-
                                 ?>
                             </tbody>
                           </table>
@@ -80,5 +78,6 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+                                </main>
     </body>
 </html>
