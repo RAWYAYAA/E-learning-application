@@ -13,17 +13,12 @@
     </head>
     <body>
         <main>
-        <div class="d-flex" id="wrapper">
             <!-- Sidebar-->
                 <?php
                 include 'sidebar.php';
+                include 'navbar.php';
                 ?>
-                <div class="list-group list-group-flush"> 
-                </div>
-            </div>
-            <?php
-            include 'navbar.php';
-            ?>
+            <!-- navbar -->
                 <!-- Page content-->
                 <div class="container-fluid">
                     <div class="buttons">
@@ -40,16 +35,16 @@
                         </ul>
                     </div>
                     <div class="mytable  ml-3 ">
-                        <table class="table table-borderless m-3">
+                        <table class="table table-borderless m-3 bg-white">
                             <thead class="">
                               <tr class="text-muted">
-                                <th> </th>
+                                <td> </td>
                                 <th>name</th>
                                 <th>Email</th>
                                 <th>phone</th>
                                 <th>enroll number</th>
                                 <th>date of admission</th>
-                                <th> </th>
+                                <td> </td>
                               </tr>
                             </thead>
                             <tbody class="">

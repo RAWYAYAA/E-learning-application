@@ -35,6 +35,19 @@ a.link{
     align-self: flex-end;
 }
 
+#indexBody {
+    background: linear-gradient(90deg,rgba(0,193,254,1)0%,rgba(250,255,193,1)100%);
+    font-family: Montserrat;
+}
+.login{ 
+    border-radius: 20px;
+ } 
+ .logo h1{
+     font-size: 32px;
+ }
+ #content{
+     height: 100vh;
+ }
 
 @media screen and (max-width:984px) {
     .navbar{

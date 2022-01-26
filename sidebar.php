@@ -15,40 +15,43 @@
                     <ul>
                     <li class="m-3 p-2 rounded-3 <?php if(basename($_SERVER['REQUEST_URI']) == 'Dashboard.php') echo 'bg-info'; ?>">
                         <a class="link" href="Dashboard.php">
-                        <img src="./assets/Vector.svg" alt="home">
+                        <img src="./assets/Vector.svg" alt="aceuil">
                         <span class="p-3">Home</span>
                     </a>
                     </li>
                     <li class="m-3 p-2 rounded-3">
-                        <img src="./assets/book.svg" alt="bookmark">
+                        <img src="./assets/book.svg" alt="mark">
                         <span class="p-3">Course</span>
                     </li>
                     <li class="m-3 p-2 rounded-3 <?php if(basename($_SERVER['REQUEST_URI']) == 'student.php') echo 'bg-info'; ?>">
                         <a class="link" href="student.php">
-                        <img class="item-align-center" src="./assets/graduation.svg" alt="graduation">
-                        <span class="p-3">Students</span>
+                        <img class="" src="./assets/graduation.svg" alt="graduation">
+                        <span class="p-2">Students</span>
                     </a>
                     </li>
                     <li class="m-3 p-2 rounded-3 <?php if(basename($_SERVER['REQUEST_URI']) == 'paymentdetail.php') echo 'bg-info'; ?>">
                         <a class="link" href="paymentdetail.php">
-                        <img src="./assets/payment.svg" alt="payment">
+                        <img src="./assets/payment.svg" alt="prix">
                         <span class="p-3">Payment</span>
                        </a>
                     </li>
                     <li class="m-3 p-2 rounded-3">
-                        <img src="./assets/report.svg" alt="report">
+                        <img src="./assets/report.svg" alt="azert">
                         <span class="p-3">Report</span>
                     </li>
                     <li class="m-3 p-2 rounded-3">
-                        <img src="./assets/setting.svg" alt="setting">
+                        <img src="./assets/setting.svg" alt="parametres">
                         <span class="p-3">Settings</span>
                     </li>
                     <li class="mt-5 m-3 ">
                         <a class="link" href="index.php">
                             <span class="p-3">Logout</span>
-                            <img src="./assets/logout.svg" alt="logout">
+                            <img src="./assets/logout.svg" alt="sortir">
                         </a>
                     </li>
                 </div>
             </ul>
         </div> 
+        <div class="list-group list-group-flush">
+        </div>
+ </div>

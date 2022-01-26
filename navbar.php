@@ -13,7 +13,7 @@
             <ul class=" navbar navbar-nav ms-auto mt-2 mt-lg-0">
                 <li class="nav-item">
                     <div class="input-group flex-nowrap ls2">
-                        <input type="text" class="form-control ls1" placeholder="Search.."  aria-describedby="addon-wrapping">
+                        <input type="text" class="form-control ls1" placeholder="Search..">
                       </div>
                 </li>
                 <li class="nav-item">

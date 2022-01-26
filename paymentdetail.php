@@ -14,12 +14,7 @@
         <main>
             <?php
                 include 'sidebar.php';
-            ?>
-            <div class="list-group list-group-flush">
-                </div>
-            </div>
-            <?php
-             include 'navbar.php';
+                include 'navbar.php';
             ?>
                 <!-- Page content-->
                 <div class="container-fluid">
@@ -34,7 +29,7 @@
                         </ul>
                     </div>
                     <div class="mytable  ml-3 ">
-                        <table class="table m-3 ">
+                        <table class="table m-3 bg-white">
                             <thead class="">
                               <tr class="text-muted">
                                 <th>Name</th>

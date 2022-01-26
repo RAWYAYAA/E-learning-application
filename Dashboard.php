@@ -14,14 +14,10 @@
         <main>
                  <?php
                  include 'sidebar.php';
+                 include 'navbar.php';
                 ?>
-                <div class="list-group list-group-flush">
-                </div>
-            </div>
+                
             <!-- Page content wrapper-->
-            <?php
-                include 'navbar.php';
-            ?>
                 <!-- Page content-->
                 <div class="container-fluid">
                     <div class="row gap-4 just">
@@ -55,8 +51,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
