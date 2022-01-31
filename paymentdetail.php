@@ -3,8 +3,6 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link href="styles.css" rel="stylesheet" />
         <link rel="stylesheet" href="mystyle.css">
@@ -42,16 +40,13 @@
                             </thead>
                             <tbody class="">
                                 <?php
-                                    $payment=array(
-                                        array("name"=>"Karthi","payments"=>"First","bill"=>"00012223","amount"=>"DHS 100,000","balance"=>"DHS 500,000","date"=>"05-JAN,2022"),
-                                        array("name"=>"Karthi","payments"=>"First","bill"=>"00012223","amount"=>"DHS 100,000","balance"=>"DHS 500,000","date"=>"05-JAN,2022"),
-                                        array("name"=>"Karthi","payments"=>"First","bill"=>"00012223","amount"=>"DHS 100,000","balance"=>"DHS 500,000","date"=>"05-JAN,2022"),
-                                        array("name"=>"Karthi","payments"=>"First","bill"=>"00012223","amount"=>"DHS 100,000","balance"=>"DHS 500,000","date"=>"05-JAN,2022"),
-                                    );
-                                    foreach ($payment as $users){
+                                     $file = 'payment.json';
+                                     $data = file_get_contents($file);
+                                     $students = Json_decode($data,true);
+                                    foreach ($students as $users){
                                         echo '<tr>';
-                                        foreach($users as $user){
-                                            echo'<td>'.$user.'</td>';
+                                        foreach($users as $key){
+                                            echo'<td>'.$key.'</td>';
                                         };
                                         echo '
                                         <td>

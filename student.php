@@ -3,13 +3,10 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link href="styles.css" rel="stylesheet" />
         <link rel="stylesheet" href="mystyle.css">
         <title>Dashboard</title>
-
     </head>
     <body>
         <main>
@@ -49,23 +46,17 @@
                             </thead>
                             <tbody class="">
                                 <?php
-                                    $students=array(
-                                        array("image" => "u.png", "name" => "username", "email" => "User@email.com", "phone" => "7543077760", "enroll" => "1234567035477760", "datedadmission" => "08-Dec,2021"),
-                                        array("image" => "u.png", "name" => "username", "email" => "User@email.com", "phone" => "7543077760", "enroll" => "1234567035477760", "datedadmission" => "08-Dec,2021"),
-                                        array("image" => "u.png", "name" => "username", "email" => "User@email.com", "phone" => "7543077760", "enroll" => "1234567035477760", "datedadmission" => "08-Dec,2021"),
-                                        array("image" => "u.png", "name" => "username", "email" => "User@email.com", "phone" => "7543077760", "enroll" => "1234567035477760", "datedadmission" => "08-Dec,2021"),
-                                        array("image" => "u.png", "name" => "username", "email" => "User@email.com", "phone" => "7543077760", "enroll" => "1234567035477760", "datedadmission" => "08-Dec,2021"),
-                                        array("image" => "u.png", "name" => "username", "email" => "User@email.com", "phone" => "7543077760", "enroll" => "1234567035477760", "datedadmission" => "08-Dec,2021"),
-                                        array("image" => "u.png", "name" => "username", "email" => "User@email.com", "phone" => "7543077760", "enroll" => "1234567035477760", "datedadmission" => "08-Dec,2021"),
-                                    );
-                                    foreach($students as $student){
+                                    $file = 'student.json';
+                                    $data = file_get_contents($file);
+                                    $student = Json_decode($data,true);
+                                    foreach($student as $key){
                                         echo '<tr>';
-                                        echo '<th><img src="assets/'.$student['image'].'" alt="user pic"></th>';
-                                        echo '<td>'.$student['name'].'</td>';
-                                        echo '<td>'.$student['email'].'</td>';
-                                        echo '<td>'.$student['phone'].'</td>';
-                                        echo '<td>'.$student['enroll'].'</td>';
-                                        echo '<td>'.$student['datedadmission'].'</td>';
+                                        echo '<th><img src="assets/'.$key['image'].'" alt="user pic"></th>';
+                                        echo '<td>'.$key['name'].'</td>';
+                                        echo '<td>'.$key['email'].'</td>';
+                                        echo '<td>'.$key['phone'].'</td>';
+                                        echo '<td>'.$key['enroll'].'</td>';
+                                        echo '<td>'.$key['datedadmission'].'</td>';
                                         echo '<td>
                                         <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M18.3033 2.08777L16.9113 0.695801C16.4478 0.231934 15.8399 0 15.2321 0C14.6242 0 14.0164 0.231934 13.5525 0.69543L0.475916 13.772L0.00462689 18.0107C-0.0547481 18.5443 0.365701 19 0.88783 19C0.920858 19 0.953885 18.9981 0.987654 18.9944L5.22332 18.5265L18.3036 5.44617C19.231 4.51881 19.231 3.01514 18.3033 2.08777ZM4.67818 17.3924L1.2259 17.775L1.61035 14.3175L11.4031 4.52475L14.4747 7.59629L4.67818 17.3924ZM17.4639 4.60676L15.3141 6.7565L12.2426 3.68496L14.3923 1.53521C14.6164 1.31107 14.9148 1.1875 15.2321 1.1875C15.5494 1.1875 15.8474 1.31107 16.0719 1.53521L17.4639 2.92719C17.9266 3.39031 17.9266 4.14363 17.4639 4.60676Z" fill="#00C1FE"/>
