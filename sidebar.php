@@ -19,9 +19,11 @@
                         <span class="p-3">Home</span>
                     </a>
                     </li>
-                    <li class="m-3 p-2 rounded-3">
-                        <img src="./assets/book.svg" alt="mark">
-                        <span class="p-3">Course</span>
+                    <li class="m-3 p-2 rounded-3 <?php if(basename($_SERVER['REQUEST_URI']) == 'courses.php') echo 'bg-info'; ?>">
+                        <a class="link" href="courses.php">
+                        <img src="./assets/Vector.svg" alt="aceuil">
+                        <span class="p-3">Courses</span>
+                    </a>
                     </li>
                     <li class="m-3 p-2 rounded-3 <?php if(basename($_SERVER['REQUEST_URI']) == 'student.php') echo 'bg-info'; ?>">
                         <a class="link" href="student.php">

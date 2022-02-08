@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="mystyle.css">
     <title>Document</title>
 </head>
 <body>
-
-    <form method="POST" action="add.php" >
+    <div class="container">
+    <form class="d-flex flex-column" method="POST" action="addstudent.php" >
     <label class="form-label">image</label>
     <input type="file"  class="form-control " name="image" placeholder="Entrer une image">
     <label class="form-label">name</label>
@@ -21,8 +23,8 @@
     <input type="tel"  class="form-control "  name="enroll" placeholder="Enter enroll">
     <label class="form-label">datedadmission</label>
     <input type="date"  class="form-control " name="datedadmission" placeholder="Enter date">     
-    <input type="submit" value="add" name="btnadd">     
+    <input class="btn-info" type="submit" value="add" name="save">     
     </form>
-    
+    </div>
 </body>
 </html>
