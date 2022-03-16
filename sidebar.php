@@ -1,5 +1,10 @@
-<?php 
+<?php
 session_start();
+    if(!isset($_SESSION['Name']) || (time() - $_SESSION['time'] > 3600*24)){
+        session_unset();
+        session_destroy();
+        header('location: index.php');
+    }
 ?>
     <div class="d-flex" id="wrapper">
     <!-- Sidebar-->
@@ -9,7 +14,7 @@ session_start();
                 <li><h1 class="border-start px-2 m-3 border-info border-5 fw-bold fs-2 ">E-classe</h1></li>
                 <li>
                     <img class="rounded-circle mt-3 p-3" src="./assets/youcode.svg" alt="image youcode">
-                    <p class="fw-bold px-4"><?php  echo $_SESSION['Name'] ;?></p>
+                    <p class="fw-bold px-4 ms-4"><?php  echo $_SESSION['Name'] ;?></p>
                     <span class="text-info px-5">Admin</span>
                 </li>
                 </ul>

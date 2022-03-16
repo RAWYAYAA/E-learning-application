@@ -26,7 +26,7 @@
 </head>
 <body>
     <div class="container">
-    <form class="d-flex flex-column" method="POST" action="formaddcourse.php" >
+    <form class="d-flex flex-column" method="POST" name="form" action="formaddcourse.php" >
     <label class="form-label">id</label>
     <input type="tel"  class="form-control " name="id" placeholder="Enter id">
     <label class="form-label">title</label>

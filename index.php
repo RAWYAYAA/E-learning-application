@@ -1,28 +1,33 @@
 <?php 
+
     session_start();
     require_once "e-classe-db.php";
-    if(isset($_POST['check'])){
-    $email=$_POST['email'];
-    $pass= $_POST['password'];
-    $req="SELECT * from comptes where EMAIL= '$email' and PASSWORD='$pass' ";
-    $res=$conn->query($req);
-    if( $res -> num_rows > 0){
-        $row = $res -> fetch_assoc();
-        // $row = mysqli_fetch_assoc($res);
-        $_SESSION['Name'] = $row['USERNAME'];
-        $box = $_POST['box'] ?? "";
-        if($box === "on"){
-        setcookie('email', $email, time()+ 3600*24);
-        setcookie('password', $pass, time()+ 3600*24);
-        }else{
-            setcookie('email');
-            setcookie('password');
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+                $email=$_POST['email'];
+                $pass= $_POST['password'];
+                $req="SELECT * from comptes where email= '$email' and password='$pass' ";
+                $res=$conn->query($req);
+                if( $res -> num_rows > 0){
+                    $row = $res -> fetch_assoc();
+                    echo 'yes';
+                    // $row = mysqli_fetch_assoc($res);
+                    $_SESSION['Name'] = $row['nom'];
+                    $_SESSION['time'] = time();
+                    
+                    $box = $_POST['box'] ?? "";
+                    if($box === "on"){
+                    setcookie('email', $email, time()+ 3600*24);
+                    setcookie('password', $pass, time()+ 3600*24);
+                }
+                else{
+                    setcookie('email');
+                    setcookie('password');
+                }
+                header('location: dashboard.php');
+                }else{
+                    header('location: index.php?error');
+                }
         }
-        header('location: dashboard.php');
-    }else{
-        header('location: index.php?error');
-    }
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -48,26 +53,30 @@
                 }
                 ?>
               </div>
-                    <form method="POST">
+                    <form method="POST" name="form" >
                              <div class="mb-4">
                              <label class="form-label">Email</label>
-                             <input type="email" class="form-control"name="email" value="<?= $_COOKIE['email'] ?? "" ?>" placeholder="Enter your email" required>
+                             <input type="email" class="form-control"name="email" value="<?= $_COOKIE['email'] ?? "" ?>" placeholder="Enter your email" >
                              </div>
                     <div class="mb-4">
                     <label class="form-label">Password</label>
-                    <input type="password"  class="form-control " name="password" value="<?= $_COOKIE['password'] ?? "" ?>" placeholder="Enter your password" required>
+                    <input type="password"  class="form-control " name="password" value="<?= $_COOKIE['password'] ?? "" ?>" placeholder="Enter your password">
                     </div>
                     <div class="form-check form-switch ms-2 mb-2">
                         <input name="box" class="form-check-input" type="checkbox">
                         <label class="form-check-label" for="box">Remember me</label>
                     </div>
                     <div class="validation  text-center  mb-3"> 
-                       <input type="submit" class="btn-info text-white rounded p-2 shadow-none w-100" name="check" value="SIGN IN">
+                       <input type="submit" class="btn-info text-white rounded p-2 shadow-none w-100" id="check" name="check" value="SIGN IN">
                     <!-- <a href="student.html"><a class="btn-info text-white rounded p-2 shadow-none w-100" href="#">SIGN IN</a></a> -->
-                    <p class=" fs-5 p-4 text-muted">Forgot your password?<a href="#">Reset Password</a></p>
+                    <p class=" fs-5 p-4 text-muted">Forgot your password?<a href="">Reset Password</a></p>
+                </div>
+                <div class="signup">
+                <a href="signup.php" class="btn-info text-white rounded  shadow-none p-2 d-flex  justify-content-center text-decoration-none">SIGN UP</a>
                 </div>
         </form>
     </div> 
-</main>       
+</main>   
+<script src="login.js"></script>    
 </body>
 </html>
